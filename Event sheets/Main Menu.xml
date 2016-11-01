@@ -2,5 +2,16 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main Menu</name>
-    <events />
+    <events>
+        <event-block sid="572888765417121">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="301997236341860" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="401444345709829" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

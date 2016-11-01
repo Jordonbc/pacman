@@ -5,7 +5,7 @@
     <event-sheet>Loading</event-sheet>
     <size>
         <width>640</width>
-        <height>360</height>
+        <height>640</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -45,7 +45,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>10.527160645</x>
-                        <y>6.641296387</y>
+                        <y>157.641296387</y>
                         <z>0</z>
                         <width>618.950805664</width>
                         <height>94.783798218</height>
@@ -71,8 +71,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>177.302703857</x>
-                        <y>93.364875793</y>
+                        <x>158.315948486</x>
+                        <y>277.312103271</y>
                         <z>0</z>
                         <width>323.670318604</width>
                         <height>129.552398682</height>

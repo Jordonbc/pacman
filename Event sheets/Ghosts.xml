@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Ghosts</name>
+    <events>
+        <event-block sid="825619822149435">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="387011408623549" type="Ghost" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="373618742477470" type="Ghost" />
+            </actions>
+        </event-block>
+        <event-block sid="179906573314635">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="595219914759585" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="405243768029627">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="957196691953661" type="System">
+                            <param id="0" name="Object">Ghost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="312311710624991" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Value">int(random(0, 4))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="705836486124877">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="626112213717811" type="Ghost">
+                                    <param id="0" name="Instance variable">PointNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="402458776192639" type="Ghost">
+                                    <param id="0" name="X">BottomRightPoint.X</param>
+                                    <param id="1" name="Y">BottomRightPoint.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="117427145399137">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="733702819196677" type="Ghost">
+                                    <param id="0" name="Instance variable">PointNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="865909709236778" type="Ghost">
+                                    <param id="0" name="X">BottomLeftPoint.X</param>
+                                    <param id="1" name="Y">BottomLeftPoint.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="457215793986638">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="902767207559169" type="Ghost">
+                                    <param id="0" name="Instance variable">PointNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="154445614512355" type="Ghost">
+                                    <param id="0" name="X">TopRightPoint.X</param>
+                                    <param id="1" name="Y">TopRightPoint.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="204939711074440">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="442546843065531" type="Ghost">
+                                    <param id="0" name="Instance variable">PointNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="878424194100654" type="Ghost">
+                                    <param id="0" name="X">TopLeftPoint.X</param>
+                                    <param id="1" name="Y">TopLeftPoint.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="811504544151310">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="398303446390127" type="Ghost" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="290449957853941" type="Ghost">
+                    <param id="0" name="Instance variable">PointNumber</param>
+                    <param id="1" name="Value">int(random(0, 4))</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="663088001544824">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="191509161927492" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="209002149641665" type="Ghost">
+                            <param id="0" name="X">BottomRightPoint.X</param>
+                            <param id="1" name="Y">BottomRightPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858140628362760">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="583385802967455" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="576010792990722" type="Ghost">
+                            <param id="0" name="X">BottomLeftPoint.X</param>
+                            <param id="1" name="Y">BottomLeftPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="138044527246745">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="869555336439804" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="836205016270700" type="Ghost">
+                            <param id="0" name="X">TopRightPoint.X</param>
+                            <param id="1" name="Y">TopRightPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="330799802159676">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="163897167954821" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="346556408704539" type="Ghost">
+                            <param id="0" name="X">TopLeftPoint.X</param>
+                            <param id="1" name="Y">TopLeftPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="644490845372646">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="407345878902865" type="Ghost" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="730179660908411" type="Ghost">
+                    <param id="0" name="Instance variable">PointNumber</param>
+                    <param id="1" name="Value">int(random(0, 4))</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="590870456420412">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="360379307449202" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="745283538742348" type="Ghost">
+                            <param id="0" name="X">TopLeftPoint.X</param>
+                            <param id="1" name="Y">TopLeftPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="971946489328166">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="178315095932565" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="222144087863102" type="Ghost">
+                            <param id="0" name="X">TopRightPoint.X</param>
+                            <param id="1" name="Y">TopRightPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="773833580781623">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="677861690982244" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="187991424753181" type="Ghost">
+                            <param id="0" name="X">BottomLeftPoint.X</param>
+                            <param id="1" name="Y">BottomLeftPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="491281989395869">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="179213890677954" type="Ghost">
+                            <param id="0" name="Instance variable">PointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="284092692684990" type="Ghost">
+                            <param id="0" name="X">BottomRightPoint.X</param>
+                            <param id="1" name="Y">BottomRightPoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="704937110840169">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="234137859593815" type="System">
+                    <param id="0" name="Variable">PacManLives</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="2" name="Stop" sid="568861670496476" type="Ghost" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

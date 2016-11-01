@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game</name>
+    <events>
+        <variable constant="0" name="Score" sid="260555629531427" static="0" type="number">0</variable>
+        <variable constant="0" name="PacManLives" sid="181190758505965" static="0" type="number">3</variable>
+        <include>Ghosts</include>
+        <include>PacmanMain</include>
+    </events>
+</c2eventsheet>

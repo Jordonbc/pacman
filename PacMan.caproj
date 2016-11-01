@@ -8,18 +8,27 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>36jfo79wqa8sa</unique-id>
-    <saved-with-version>23300</saved-with-version>
+    <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>360</height>
+        <width>700</width>
+        <height>800</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -44,18 +53,241 @@
             <object-type name="LoadingText" sid="501013922193331">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="PercentText" sid="717457045262130">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
-        <object-type name="PercentText" sid="717457045262130">
+        <object-folder name="Game">
+            <object-folder name="Pacman">
+                <object-type name="PacMan" sid="555445711285077">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="8Direction" sid="417771070280641">
+                            <behavior id="EightDir" />
+                        </behavior-type>
+                        <behavior-type name="Bullet" sid="995413588637402">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="Wrap" sid="275192136145131">
+                            <behavior id="wrap" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="929341351248016" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Programming\Construct 2\PacMan Remake\Sprites\packles-2.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.25" />
+                                    <point x="0.5" y="0.15625" />
+                                    <point x="0.78125" y="0.21875" />
+                                    <point x="0.5625" y="0.5" />
+                                    <point x="0.78125" y="0.78125" />
+                                    <point x="0.5" y="0.875" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Programming\Construct 2\PacMan Remake\Sprites\packles eat.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.25" />
+                                    <point x="0.5" y="0.15625" />
+                                    <point x="0.78125" y="0.21875" />
+                                    <point x="0.96875" y="0.5" />
+                                    <point x="0.78125" y="0.78125" />
+                                    <point x="0.5" y="0.875" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Ghosts">
+                <object-type name="GhostBlinky" sid="589587687397000">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537306210498360" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Programming\Construct 2\PacMan Remake\Sprites\ghost.png">
+                                <collision-poly>
+                                    <point x="0.21875" y="0.21875" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.84375" y="0.84375" />
+                                    <point x="0.5" y="0.84375" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GhostClyde" sid="301781875535967">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285598797174547" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Programming\Construct 2\PacMan Remake\Sprites\ghost4.png">
+                                <collision-poly>
+                                    <point x="0.21875" y="0.21875" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.84375" y="0.84375" />
+                                    <point x="0.5" y="0.84375" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GhostInky" sid="204243376075588">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589109339080424" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Programming\Construct 2\PacMan Remake\Sprites\ghost3.png">
+                                <collision-poly>
+                                    <point x="0.21875" y="0.21875" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.84375" y="0.84375" />
+                                    <point x="0.5" y="0.84375" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GhostPinky" sid="622612150194516">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382983007571883" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Programming\Construct 2\PacMan Remake\Sprites\ghost2.png">
+                                <collision-poly>
+                                    <point x="0.21875" y="0.21875" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.84375" y="0.84375" />
+                                    <point x="0.5" y="0.84375" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="Barrier" sid="169525105687565">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="359034201710545">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427407996967776" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Keyboard" sid="739280878398587">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TopRightPoint" sid="686015394572031">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536039212937326" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TopLeftPoint" sid="624245393974546">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338100767535880" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BottomLeftPoint" sid="431809992304836">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727318386538466" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BottomRightPoint" sid="780016571420981">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268057073455275" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PacManStart" sid="743140469411358">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="704214753173518" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverText" sid="449747796397616">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Dot" sid="800371053093805">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997346863595900" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreText" sid="523079942507396">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LivesText" sid="239273709785139">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CreditsText" sid="825708875207930">
             <plugin id="Text" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Ghost" plugin-id="Sprite" sid="720198630440194">
+            <members>
+                <member>GhostBlinky</member>
+                <member>GhostClyde</member>
+                <member>GhostInky</member>
+                <member>GhostPinky</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="PointNumber" sid="746778486014559" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="658641784111920">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="798986444657509">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout-folder name="Loading">
             <layout>Loading.xml</layout>
         </layout-folder>
         <layout-folder name="Menus">
             <layout>Main Menu.xml</layout>
+        </layout-folder>
+        <layout-folder name="Game">
+            <layout>Game.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -65,8 +297,22 @@
         <event-folder name="Menus">
             <event-sheet>Main Menu.xml</event-sheet>
         </event-folder>
+        <event-folder name="Game">
+            <event-folder name="Events">
+                <event-folder name="Pacman">
+                    <event-sheet>PacmanMovement.xml</event-sheet>
+                    <event-sheet>PacmanMain.xml</event-sheet>
+                </event-folder>
+                <event-folder name="Ghosts">
+                    <event-sheet>Ghosts.xml</event-sheet>
+                </event-folder>
+            </event-folder>
+            <event-sheet>Game.xml</event-sheet>
+        </event-folder>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="87" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
